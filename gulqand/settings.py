@@ -132,11 +132,11 @@ WSGI_APPLICATION = 'gulqand.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gulqand_db_e0th',
-        'USER': 'gulqand_db_e0th_user',
-        'PASSWORD': '6tcJquoyJAwRIaqfLFnE1VrqcrHVghoY',
-        'HOST': '127.0.0.1',
-        'PORT': 5432,
+        'NAME': os.getenv("DB_NAME"),
+        'USER': os.getenv("DB_USER"),
+        'PASSWORD': os.getenv("DB_PASSWORD"),
+        'HOST': os.getenv("DB_HOST"),
+        'PORT': os.getenv("DB_PORT"),
     }
 }
 
