@@ -133,13 +133,14 @@ WSGI_APPLICATION = 'gulqand.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('PGDATABASE', os.getenv('DB_NAME', 'gulqand')),
-        'USER': os.getenv('PGUSER', os.getenv('DB_USER', 'postgres')),
-        'PASSWORD': os.getenv('PGPASSWORD', os.getenv('DB_PASSWORD', '1234')),
-        'HOST': os.getenv('PGHOST', os.getenv('DB_HOST', '127.0.0.1')),
-        'PORT': os.getenv('PGPORT', os.getenv('DB_PORT', '5432')),
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
