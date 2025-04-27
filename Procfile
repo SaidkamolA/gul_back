@@ -1,1 +1,1 @@
-web: gunicorn gulqand.wsgi:application --workers 2
+worker: gunicorn backend.wsgi & python bot/bot.py
