@@ -84,7 +84,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "https://gulqand.uz",
     "https://www.gulqand.uz",
-    "https://web-production-34229.up.railway.app",
 ]
 
 
