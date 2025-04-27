@@ -82,7 +82,6 @@ CORS_ALLOWED_ORIGINS = [
     "http://192.168.0.108:3001",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://www.gulqand.uz/"
 ]
 
 
@@ -129,19 +128,16 @@ TEMPLATES = [
 WSGI_APPLICATION = 'gulqand.wsgi.application'
 
 # Database
-import os
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
+        'NAME': 'gulqand',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': '127.0.0.1',
+        'PORT': 5432,
     }
 }
-
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
