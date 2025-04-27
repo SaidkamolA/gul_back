@@ -82,6 +82,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://192.168.0.108:3001",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "https://gulqand.uz",
+    "https://www.gulqand.uz",
 ]
 
 
@@ -131,11 +133,11 @@ WSGI_APPLICATION = 'gulqand.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gulqand',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': '127.0.0.1',
-        'PORT': 5432,
+        'NAME': os.getenv('PGDATABASE', os.getenv('DB_NAME', 'gulqand')),
+        'USER': os.getenv('PGUSER', os.getenv('DB_USER', 'postgres')),
+        'PASSWORD': os.getenv('PGPASSWORD', os.getenv('DB_PASSWORD', '1234')),
+        'HOST': os.getenv('PGHOST', os.getenv('DB_HOST', '127.0.0.1')),
+        'PORT': os.getenv('PGPORT', os.getenv('DB_PORT', '5432')),
     }
 }
 
